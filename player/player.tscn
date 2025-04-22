@@ -156,7 +156,7 @@ vframes = 7
 frame = 42
 
 [node name="Shadow" type="Sprite2D" parent="Sprite2D"]
-modulate = Color(0, 0, 0, 0.254902)
+modulate = Color(0, 0, 0, 0.176471)
 show_behind_parent = true
 position = Vector2(0, 10)
 texture = ExtResource("3_67fp1")
