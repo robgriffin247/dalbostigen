@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://br2kagcxvsikn"]
+
+[ext_resource type="Texture2D" uid="uid://b013lbhhocbcp" path="res://artwork/terrain01.png" id="1_i32cx"]
+[ext_resource type="Script" path="res://tilemaps/level_tilemap.gd" id="2_0ekf5"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xw0ho"]
+texture = ExtResource("1_i32cx")
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_dgo1b"]
+physics_layer_0/collision_layer = 16
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_xw0ho")
+
+[node name="Terrain" type="TileMapLayer"]
+z_index = -1
+tile_set = SubResource("TileSet_dgo1b")
+script = ExtResource("2_0ekf5")
