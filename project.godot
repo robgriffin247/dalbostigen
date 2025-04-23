@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="dalbostigen"
-run/main_scene="res://playground.tscn"
+run/main_scene="res://levels/area_01/level_01.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 LevelManager="*res://globals/global_level_manager.gd"
+PlayerManager="*res://globals/global_player_manager.gd"
 
 [display]
 
