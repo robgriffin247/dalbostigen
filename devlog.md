@@ -68,6 +68,11 @@
 
 #### Adding Scene Manager/Level Transition
 
+- Create Area2D scene called LevelTransition
+	- Add a collision shape, set local to scene
+	- Add a script (@tool)
+- Add ``LevelTransition``s to levels
+
 #### Adding a Player HUD
 
 #### Add Pause Menu, Save and Load

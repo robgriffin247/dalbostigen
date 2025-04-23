@@ -8,8 +8,9 @@
 [ext_resource type="Script" path="res://player/player_state_machine/state_walk.gd" id="4_el684"]
 [ext_resource type="Script" path="res://player/player_camera.gd" id="7_m0pls"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_der0h"]
-radius = 8.94427
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_w1t4x"]
+radius = 7.0
+height = 22.0
 
 [sub_resource type="Animation" id="Animation_2a5tw"]
 length = 0.001
@@ -144,10 +145,6 @@ collision_mask = 16
 motion_mode = 1
 script = ExtResource("1_dxp2v")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -10)
-shape = SubResource("CircleShape2D_der0h")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -16)
 texture = ExtResource("1_yih5g")
@@ -160,6 +157,10 @@ modulate = Color(0, 0, 0, 0.176471)
 show_behind_parent = true
 position = Vector2(0, 10)
 texture = ExtResource("3_67fp1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("CapsuleShape2D_w1t4x")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
