@@ -72,7 +72,13 @@
 	- Add a collision shape, set local to scene
 	- Add a script (@tool)
 - Add ``LevelTransition``s to levels
+- Add scenetransition and add to globals
 
-#### Adding a Player HUD
 
 #### Add Pause Menu, Save and Load
+
+- add canvaslayer with process mode set to always
+	- add styling (control containing colorrect, buttons, labels etc)
+<!-- watch ep 15 -->
+
+#### Adding a Player HUD
