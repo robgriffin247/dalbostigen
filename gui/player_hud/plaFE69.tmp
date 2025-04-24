@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=3 uid="uid://cs68upy5ietik"]
+
+[ext_resource type="PackedScene" uid="uid://cq6ydndungcff" path="res://general/label.tscn" id="1_1en8c"]
+[ext_resource type="Script" path="res://gui/player_hud/level_label.gd" id="2_6ahdr"]
+
+[node name="PlayerHud" type="CanvasLayer"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 48.0
+color = Color(0, 0, 0, 0.341176)
+
+[node name="Label" parent="Control" instance=ExtResource("1_1en8c")]
+layout_mode = 0
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 47.0
+text = "world x.x"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("2_6ahdr")

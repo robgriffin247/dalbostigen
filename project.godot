@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="dalbostigen"
-run/main_scene="res://levels/area_01/level_01.tscn"
+run/main_scene="res://levels/world_01/level_01.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,6 +22,7 @@ PlayerManager="*res://globals/global_player_manager.gd"
 SceneTransition="*res://gui/scene_transition/scene_transition.tscn"
 PauseScreen="*res://gui/pause_screen/pause_screen.tscn"
 SaveManager="*res://globals/global_save_manager.gd"
+PlayerHud="*res://gui/player_hud/player_hud.tscn"
 
 [display]
 
