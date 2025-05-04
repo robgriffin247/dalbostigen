@@ -1,0 +1,193 @@
+[gd_scene load_steps=11 format=3 uid="uid://c52a80v4bb2cn"]
+
+[ext_resource type="Script" path="res://gui/pause_screen/pause_screen.gd" id="1_a4jvb"]
+[ext_resource type="PackedScene" uid="uid://dj8bekbmgmb0t" path="res://gui/pause_screen/pause_screen_button.tscn" id="2_4j40d"]
+[ext_resource type="PackedScene" uid="uid://d12s5ko0nnvkr" path="res://general/label_bold.tscn" id="3_mnc7d"]
+[ext_resource type="PackedScene" uid="uid://cq6ydndungcff" path="res://general/label.tscn" id="4_0vfyc"]
+[ext_resource type="Texture2D" uid="uid://bswfjk71jx2ps" path="res://artwork/inventory_outline.png" id="4_jcvqo"]
+[ext_resource type="Script" path="res://gui/pause_screen/inventory/inventory_ui.gd" id="5_l6k7m"]
+[ext_resource type="PackedScene" uid="uid://xvh61rgk5mqc" path="res://gui/pause_screen/inventory/inventory_slot.tscn" id="5_tf8cc"]
+[ext_resource type="Resource" uid="uid://ba8mi5r5xajjr" path="res://gui/pause_screen/inventory/player_inventory.tres" id="6_4mjc3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prt2y"]
+atlas = ExtResource("4_jcvqo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vppen"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+texture = SubResource("AtlasTexture_prt2y")
+texture_margin_left = 8.0
+texture_margin_top = 8.0
+texture_margin_right = 8.0
+texture_margin_bottom = 8.0
+
+[node name="PauseScreen" type="CanvasLayer"]
+process_mode = 3
+layer = 2
+script = ExtResource("1_a4jvb")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1591, 0.37, 0.345395, 0.776471)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = 89.0
+offset_right = 224.0
+offset_bottom = 121.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+alignment = 2
+
+[node name="ButtonSave" parent="Control/HBoxContainer" instance=ExtResource("2_4j40d")]
+layout_mode = 2
+text = "SAVE"
+
+[node name="ButtonLoad" parent="Control/HBoxContainer" instance=ExtResource("2_4j40d")]
+layout_mode = 2
+text = "LOAD"
+
+[node name="PauseLabel" parent="Control" instance=ExtResource("3_mnc7d")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -119.0
+offset_right = -32.0
+offset_bottom = -87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.396078)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 3
+theme_override_font_sizes/font_size = 24
+text = "PAUSED"
+
+[node name="ItemDescription" parent="Control" instance=ExtResource("4_0vfyc")]
+layout_mode = 2
+offset_left = 320.0
+offset_top = 64.0
+offset_right = 456.0
+offset_bottom = 200.0
+autowrap_mode = 3
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+self_modulate = Color(0, 0.027451, 0, 0.301961)
+layout_mode = 0
+offset_left = 16.0
+offset_top = 56.0
+offset_right = 464.0
+offset_bottom = 208.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_vppen")
+
+[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+columns = 8
+script = ExtResource("5_l6k7m")
+data = ExtResource("6_4mjc3")
+
+[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot5" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot6" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot7" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot8" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot9" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot10" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot11" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot12" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot13" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot14" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot15" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot16" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot17" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot18" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot19" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot20" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot21" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot22" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot23" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot24" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot25" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot26" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2
+
+[node name="InventorySlot27" parent="Control/PanelContainer/GridContainer" instance=ExtResource("5_tf8cc")]
+layout_mode = 2

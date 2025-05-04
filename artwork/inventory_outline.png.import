@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://duav1jpds8qao"
-path="res://.godot/imported/pickups01.png-c885846867e5747a8f4b6f8a4fae174d.ctex"
+uid="uid://bswfjk71jx2ps"
+path="res://.godot/imported/inventory_outline.png-f5697a723e47736d7708f4eae41e0e77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://artwork/pickups01.png"
-dest_files=["res://.godot/imported/pickups01.png-c885846867e5747a8f4b6f8a4fae174d.ctex"]
+source_file="res://artwork/inventory_outline.png"
+dest_files=["res://.godot/imported/inventory_outline.png-f5697a723e47736d7708f4eae41e0e77.ctex"]
 
 [params]
 
