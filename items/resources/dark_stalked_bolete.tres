@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c8n20vicnm7l"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_011xq"]
+[ext_resource type="Texture2D" uid="uid://inln6p14o7ih" path="res://items/resources/sprites/dark_stalked_bolete.png" id="2_v67qy"]
+
+[resource]
+script = ExtResource("1_011xq")
+primary_name = "Dark-Stalked Bolete"
+secondary_name = "Leccinum versipelle"
+description = "A mushroom"
+texture = ExtResource("2_v67qy")

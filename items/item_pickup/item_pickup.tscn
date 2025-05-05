@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp6dmtmtlsmcf"]
+
+[ext_resource type="Script" path="res://items/item_pickup/item_pickup.gd" id="1_ub77j"]
+[ext_resource type="Texture2D" uid="uid://br4ecgov0oc0w" path="res://items/resources/sprites/blueberry.png" id="2_j0u6c"]
+[ext_resource type="Texture2D" uid="uid://bog0806006uw4" path="res://artwork/shadow.png" id="3_p3crq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vw24p"]
+radius = 4.0
+
+[node name="ItemPickup" type="Node2D"]
+script = ExtResource("1_ub77j")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_vw24p")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_j0u6c")
+
+[node name="Shadow" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.239216)
+show_behind_parent = true
+texture = ExtResource("3_p3crq")

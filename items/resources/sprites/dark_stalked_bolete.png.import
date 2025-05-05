@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpytvk5mrruhu"
-path="res://.godot/imported/blueberry.png-4e3e3a7a254ea5adec3a02030e2e5d2b.ctex"
+uid="uid://b25a713ilxe6n"
+path="res://.godot/imported/dark_stalked_bolete.png-95f836fbb8f4753dbb7ad40ac7cc8715.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/sprites/blueberry.png"
-dest_files=["res://.godot/imported/blueberry.png-4e3e3a7a254ea5adec3a02030e2e5d2b.ctex"]
+source_file="res://items/resources/sprites/dark_stalked_bolete.png"
+dest_files=["res://.godot/imported/dark_stalked_bolete.png-95f836fbb8f4753dbb7ad40ac7cc8715.ctex"]
 
 [params]
 

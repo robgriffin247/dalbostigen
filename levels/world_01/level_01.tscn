@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=4 uid="uid://isths5illkof"]
+[gd_scene load_steps=10 format=4 uid="uid://isths5illkof"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_oa8kg"]
 [ext_resource type="PackedScene" uid="uid://br2kagcxvsikn" path="res://levels/tilemaps/terrain01.tscn" id="2_k223s"]
 [ext_resource type="PackedScene" uid="uid://06gu4qo543fr" path="res://player/player_spawn/player_spawn.tscn" id="3_m355v"]
 [ext_resource type="PackedScene" uid="uid://baa3sfq1yfqwh" path="res://levels/level_transition/level_transition.tscn" id="4_voaph"]
+[ext_resource type="PackedScene" uid="uid://cp6dmtmtlsmcf" path="res://items/item_pickup/item_pickup.tscn" id="5_s2n0c"]
+[ext_resource type="Resource" uid="uid://b2rqjsa3qfly6" path="res://items/resources/chantarelle.tres" id="6_4l7g4"]
+[ext_resource type="Resource" uid="uid://diyllbb4vfm2y" path="res://items/resources/blueberry.tres" id="7_nwpa5"]
+[ext_resource type="Resource" uid="uid://c8n20vicnm7l" path="res://items/resources/dark_stalked_bolete.tres" id="8_7bstu"]
+[ext_resource type="Resource" uid="uid://dteutvipl47fw" path="res://items/resources/penny_bun.tres" id="9_8ph23"]
 
 [node name="Level01" type="Node2D"]
 script = ExtResource("1_oa8kg")
@@ -23,3 +28,23 @@ side = 1
 position = Vector2(96, 400)
 level = "res://levels/world_01/level_03.tscn"
 side = 3
+
+[node name="ItemPickup" parent="." instance=ExtResource("5_s2n0c")]
+position = Vector2(152, 232)
+item_data = ExtResource("6_4l7g4")
+
+[node name="ItemPickup2" parent="." instance=ExtResource("5_s2n0c")]
+position = Vector2(-8, 224)
+item_data = ExtResource("7_nwpa5")
+
+[node name="ItemPickup3" parent="." instance=ExtResource("5_s2n0c")]
+position = Vector2(16, 248)
+item_data = ExtResource("7_nwpa5")
+
+[node name="ItemPickup4" parent="." instance=ExtResource("5_s2n0c")]
+position = Vector2(224, 120)
+item_data = ExtResource("8_7bstu")
+
+[node name="ItemPickup5" parent="." instance=ExtResource("5_s2n0c")]
+position = Vector2(-16, 96)
+item_data = ExtResource("9_8ph23")

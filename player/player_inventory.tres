@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=13 format=3 uid="uid://ba8mi5r5xajjr"]
+
+[ext_resource type="Script" path="res://gui/pause_screen/inventory/inventory_data.gd" id="1_n2hnn"]
+[ext_resource type="Script" path="res://gui/pause_screen/inventory/slot_data.gd" id="2_ogod4"]
+[ext_resource type="Resource" uid="uid://diyllbb4vfm2y" path="res://items/resources/blueberry.tres" id="3_m855e"]
+[ext_resource type="Resource" uid="uid://dteutvipl47fw" path="res://items/resources/penny_bun.tres" id="5_royfs"]
+[ext_resource type="Resource" uid="uid://b2rqjsa3qfly6" path="res://items/resources/chantarelle.tres" id="6_pebiv"]
+[ext_resource type="Resource" uid="uid://c8n20vicnm7l" path="res://items/resources/dark_stalked_bolete.tres" id="6_wpu2u"]
+[ext_resource type="Resource" uid="uid://do5r4r35rgcuf" path="res://items/resources/stone.tres" id="7_t5cq8"]
+
+[sub_resource type="Resource" id="Resource_wif8s"]
+script = ExtResource("2_ogod4")
+item_data = ExtResource("3_m855e")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_ekipl"]
+script = ExtResource("2_ogod4")
+item_data = ExtResource("5_royfs")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_s2xut"]
+script = ExtResource("2_ogod4")
+item_data = ExtResource("6_wpu2u")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_s11g5"]
+script = ExtResource("2_ogod4")
+item_data = ExtResource("6_pebiv")
+quantity = 0
+
+[sub_resource type="Resource" id="Resource_dr7x5"]
+script = ExtResource("2_ogod4")
+item_data = ExtResource("7_t5cq8")
+quantity = 0
+
+[resource]
+script = ExtResource("1_n2hnn")
+slots = Array[ExtResource("2_ogod4")]([SubResource("Resource_wif8s"), SubResource("Resource_ekipl"), SubResource("Resource_s2xut"), SubResource("Resource_s11g5"), SubResource("Resource_dr7x5")])

@@ -1,7 +1,7 @@
 class_name PlayerHUDLabels extends Label
 
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if LevelManager.level_load_started:
 		text = "world " + get_level().world + " level " + get_level().level 
 

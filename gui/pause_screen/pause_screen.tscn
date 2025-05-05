@@ -4,9 +4,9 @@
 [ext_resource type="PackedScene" uid="uid://dj8bekbmgmb0t" path="res://gui/pause_screen/pause_screen_button.tscn" id="2_4j40d"]
 [ext_resource type="PackedScene" uid="uid://d12s5ko0nnvkr" path="res://general/label_bold.tscn" id="3_mnc7d"]
 [ext_resource type="PackedScene" uid="uid://cq6ydndungcff" path="res://general/label.tscn" id="4_0vfyc"]
-[ext_resource type="Texture2D" uid="uid://bswfjk71jx2ps" path="res://artwork/inventory_outline.png" id="4_jcvqo"]
+[ext_resource type="Texture2D" uid="uid://byoq31wvobbpl" path="res://artwork/inventory_outline.png" id="4_jcvqo"]
 [ext_resource type="Script" path="res://gui/pause_screen/inventory/inventory_ui.gd" id="5_l6k7m"]
-[ext_resource type="Resource" uid="uid://ba8mi5r5xajjr" path="res://gui/pause_screen/inventory/player_inventory.tres" id="6_4mjc3"]
+[ext_resource type="Resource" uid="uid://ba8mi5r5xajjr" path="res://player/player_inventory.tres" id="6_4mjc3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_prt2y"]
 atlas = ExtResource("4_jcvqo")
