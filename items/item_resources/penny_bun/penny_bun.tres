@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dteutvipl47fw"]
+
+[ext_resource type="Script" path="res://items/item_data.gd" id="1_len61"]
+[ext_resource type="Texture2D" uid="uid://dst1dxpt7fgkv" path="res://items/item_resources/penny_bun/penny_bun.png" id="2_q3hhh"]
+
+[resource]
+script = ExtResource("1_len61")
+primary_name = "Pennybun"
+secondary_name = "Boletus edulis"
+description = "A delicious and common bolete mushroom"
+texture = ExtResource("2_q3hhh")

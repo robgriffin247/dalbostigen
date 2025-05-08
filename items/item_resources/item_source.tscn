@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://djgp4go57osj0"]
+
+[ext_resource type="Script" path="res://items/item_resources/item_source.gd" id="1_ltojc"]
+[ext_resource type="PackedScene" uid="uid://dafh2dhm7ljm3" path="res://general/boxes/hitbox.tscn" id="2_bgwme"]
+[ext_resource type="PackedScene" uid="uid://dwa4lttnb3b0y" path="res://general/healthbar/healthbar.tscn" id="4_qp4rc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dglny"]
+radius = 4.0
+height = 14.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wm0l6"]
+radius = 4.0
+height = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bo2nx"]
+radius = 8.0
+
+[node name="ItemSource" type="CharacterBody2D"]
+script = ExtResource("1_ltojc")
+
+[node name="Hitbox" parent="." instance=ExtResource("2_bgwme")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+position = Vector2(0, 4)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_dglny")
+debug_color = Color(0.995471, 0, 0.204658, 0.42)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_wm0l6")
+
+[node name="Healthbar" parent="." instance=ExtResource("4_qp4rc")]
+visible = true
+frame = 5
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_bo2nx")

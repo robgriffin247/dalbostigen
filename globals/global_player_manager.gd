@@ -5,7 +5,7 @@ const INVENTORY_DATA = preload("res://player/player_inventory.tres")
 
 var player: Player
 var player_spawned: bool = false
-
+var player_hit_effect = 1
 
 func _ready() -> void:
 	add_player_instance()

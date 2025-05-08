@@ -1,0 +1,26 @@
+[gd_scene load_steps=7 format=3 uid="uid://bg2iotaew1g5p"]
+
+[ext_resource type="PackedScene" uid="uid://djgp4go57osj0" path="res://items/item_resources/item_source.tscn" id="1_bdy6v"]
+[ext_resource type="Texture2D" uid="uid://b17jcv026lofh" path="res://items/item_resources/blueberry/blueberry_bush.png" id="2_68iix"]
+[ext_resource type="Resource" uid="uid://diyllbb4vfm2y" path="res://items/item_resources/blueberry/blueberry.tres" id="2_r02tc"]
+[ext_resource type="Script" path="res://items/item_resources/drop_data.gd" id="3_bjj6r"]
+[ext_resource type="Texture2D" uid="uid://bf5qellxvjn28" path="res://general/artwork/shadow.png" id="3_yy166"]
+
+[sub_resource type="Resource" id="Resource_1bt46"]
+script = ExtResource("3_bjj6r")
+item = ExtResource("2_r02tc")
+min_amount = 1
+max_amount = 5
+
+[node name="BlueberrySource" type="CharacterBody2D"]
+
+[node name="ItemSource" parent="." instance=ExtResource("1_bdy6v")]
+max_hp = 3
+drops = SubResource("Resource_1bt46")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_68iix")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D"]
+modulate = Color(0, 0, 0, 0.352941)
+texture = ExtResource("3_yy166")

@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://dj8bekbmgmb0t"]
 
-[ext_resource type="FontFile" uid="uid://nk6wqt2mk7mn" path="res://artwork/PixelOperator8.ttf" id="1_3npk2"]
+[ext_resource type="FontFile" uid="uid://ckb2drpo7bwfh" path="res://general/fonts/PixelOperator8.ttf" id="1_p4xpo"]
 
 [node name="PauseScreenButton" type="Button"]
 theme_override_colors/font_pressed_color = Color(0.135805, 0.371099, 0.241657, 1)
 theme_override_colors/font_focus_color = Color(0.697711, 0.981657, 0.801872, 1)
-theme_override_fonts/font = ExtResource("1_3npk2")
+theme_override_fonts/font = ExtResource("1_p4xpo")
 theme_override_font_sizes/font_size = 16
 text = "TEXT"

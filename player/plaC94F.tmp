@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://cikk2mb4mshxb"]
+[gd_scene load_steps=23 format=3 uid="uid://cikk2mb4mshxb"]
 
 [ext_resource type="Script" path="res://player/player.gd" id="1_dxp2v"]
 [ext_resource type="Texture2D" uid="uid://myaepo8juhjn" path="res://player/player.png" id="1_yih5g"]
@@ -9,7 +9,6 @@
 [ext_resource type="Script" path="res://player/player_state_machine/state_gather.gd" id="7_bv77g"]
 [ext_resource type="Script" path="res://player/player_camera.gd" id="7_m0pls"]
 [ext_resource type="PackedScene" uid="uid://b0s6n636vws0f" path="res://general/boxes/hurtbox.tscn" id="8_gyeh6"]
-[ext_resource type="Script" path="res://player/player_interactions_host.gd" id="9_xkq41"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jsaed"]
 radius = 6.0
@@ -30,7 +29,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_hryxl"]
-resource_name = "gather_down"
+resource_name = "attack_down"
 length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -46,7 +45,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_ais4n"]
-resource_name = "gather_side"
+resource_name = "attack_side"
 length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -62,7 +61,7 @@ tracks/0/keys = {
 }
 
 [sub_resource type="Animation" id="Animation_kbrif"]
-resource_name = "gather_up"
+resource_name = "attack_up"
 length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -182,9 +181,9 @@ tracks/0/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_p7twe"]
 _data = {
 "RESET": SubResource("Animation_2a5tw"),
-"gather_down": SubResource("Animation_hryxl"),
-"gather_side": SubResource("Animation_ais4n"),
-"gather_up": SubResource("Animation_kbrif"),
+"attack_down": SubResource("Animation_hryxl"),
+"attack_side": SubResource("Animation_ais4n"),
+"attack_up": SubResource("Animation_kbrif"),
 "idle_down": SubResource("Animation_gdr44"),
 "idle_side": SubResource("Animation_5s46w"),
 "idle_up": SubResource("Animation_c2sdc"),
@@ -239,14 +238,11 @@ script = ExtResource("7_bv77g")
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("7_m0pls")
 
-[node name="Interactions" type="Node2D" parent="."]
-script = ExtResource("9_xkq41")
-
-[node name="Hurtbox" parent="Interactions" instance=ExtResource("8_gyeh6")]
+[node name="Hurtbox" parent="." instance=ExtResource("8_gyeh6")]
 collision_mask = 256
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactions/Hurtbox"]
-position = Vector2(0, 7)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(0, 2)
 shape = SubResource("CapsuleShape2D_v3hem")
 debug_color = Color(2.96004e-06, 0.648259, 0.186596, 0.42)

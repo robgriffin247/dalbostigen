@@ -1,0 +1,39 @@
+[gd_scene load_steps=8 format=3 uid="uid://dbvgdj10s1t56"]
+
+[ext_resource type="Texture2D" uid="uid://b17jcv026lofh" path="res://items/item_resources/blueberry/blueberry_bush.png" id="1_d5k0n"]
+[ext_resource type="Script" path="res://items/item_pickup/enemy.gd" id="1_lfluu"]
+[ext_resource type="Texture2D" uid="uid://bf5qellxvjn28" path="res://general/artwork/shadow.png" id="2_irppm"]
+[ext_resource type="PackedScene" uid="uid://b0s6n636vws0f" path="res://general/boxes/hurtbox.tscn" id="4_6xhug"]
+[ext_resource type="PackedScene" uid="uid://dafh2dhm7ljm3" path="res://general/boxes/hitbox.tscn" id="5_uotrf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tb3gp"]
+radius = 8.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_n2pqu"]
+radius = 8.0
+
+[node name="Slime" type="CharacterBody2D"]
+collision_layer = 256
+collision_mask = 16
+script = ExtResource("1_lfluu")
+
+[node name="SourceSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_d5k0n")
+
+[node name="ShadowSprite" type="Sprite2D" parent="SourceSprite"]
+modulate = Color(0, 0, 0, 0.27451)
+show_behind_parent = true
+texture = ExtResource("2_irppm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tb3gp")
+
+[node name="Hurtbox" parent="." instance=ExtResource("4_6xhug")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_n2pqu")
+
+[node name="Hitbox" parent="." instance=ExtResource("5_uotrf")]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox"]
+shape = SubResource("CircleShape2D_n2pqu")
