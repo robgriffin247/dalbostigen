@@ -10,7 +10,7 @@
 script = ExtResource("3_qhqke")
 item = ExtResource("2_r02tc")
 min_amount = 1
-max_amount = 4
+max_amount = 8
 
 [node name="ChanterelleSource" type="Node2D"]
 position = Vector2(0, -8)

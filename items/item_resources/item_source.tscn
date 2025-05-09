@@ -36,7 +36,7 @@ rotation = 1.5708
 shape = SubResource("CapsuleShape2D_wm0l6")
 
 [node name="Healthbar" parent="." instance=ExtResource("4_qp4rc")]
-visible = true
+position = Vector2(0, -8)
 frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

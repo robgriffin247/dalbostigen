@@ -639,8 +639,7 @@ _data = {
 }
 
 [node name="Healthbar" type="Sprite2D"]
-visible = false
-position = Vector2(0, -9)
+y_sort_enabled = true
 texture = ExtResource("1_twup5")
 hframes = 14
 vframes = 2

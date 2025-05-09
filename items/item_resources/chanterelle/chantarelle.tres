@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_y71bu")
-primary_name = "Chanterelle"
+primary_name = "Kantarell"
 secondary_name = "Cantharellus cibarius"
-description = "The gold of the forest :D"
+description = "Skogens Guld!"
 texture = ExtResource("2_kvvwg")

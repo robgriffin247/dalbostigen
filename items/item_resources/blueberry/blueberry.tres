@@ -5,7 +5,7 @@
 
 [resource]
 script = ExtResource("1_35w5i")
-primary_name = "Blueberry"
+primary_name = "Blåbär"
 secondary_name = "Vaccinium myrtillus"
-description = "Plentiful in early autumn, perfect for a pie!"
+description = "Dags för en blåbärspaj :)"
 texture = ExtResource("2_qnlkr")
