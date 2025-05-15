@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://djgp4go57osj0"]
+[gd_scene load_steps=7 format=3 uid="uid://djgp4go57osj0"]
 
 [ext_resource type="Script" path="res://items/item_source.gd" id="1_ltojc"]
 [ext_resource type="PackedScene" uid="uid://dafh2dhm7ljm3" path="res://general/boxes/hitbox.tscn" id="2_bgwme"]
+[ext_resource type="Texture2D" uid="uid://bf5qellxvjn28" path="res://general/artwork/shadow.png" id="2_gdhx2"]
 [ext_resource type="PackedScene" uid="uid://dwa4lttnb3b0y" path="res://general/healthbar/healthbar.tscn" id="4_qp4rc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wm0l6"]
@@ -18,6 +19,12 @@ collision_layer = 16
 script = ExtResource("1_ltojc")
 
 [node name="SourceSprite" type="Sprite2D" parent="."]
+
+[node name="ShadowSprite" type="Sprite2D" parent="SourceSprite"]
+modulate = Color(0, 0, 0, 0.0392157)
+show_behind_parent = true
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_gdhx2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 4)
