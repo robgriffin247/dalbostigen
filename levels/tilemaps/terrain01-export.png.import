@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://df7r4441mvvou"
-path="res://.godot/imported/chanterelle.png-196708ab2b39b3ed637948c5f7147e83.ctex"
+uid="uid://dftyic8e2np4o"
+path="res://.godot/imported/terrain01-export.png-ebb8a88a2a696e7f1bbb95b546cc1a4f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/item_resources/chanterelle/chanterelle.png"
-dest_files=["res://.godot/imported/chanterelle.png-196708ab2b39b3ed637948c5f7147e83.ctex"]
+source_file="res://levels/tilemaps/terrain01-export.png"
+dest_files=["res://.godot/imported/terrain01-export.png-ebb8a88a2a696e7f1bbb95b546cc1a4f.ctex"]
 
 [params]
 

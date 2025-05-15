@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://xvh61rgk5mqc"]
 
-[ext_resource type="Texture2D" uid="uid://df7r4441mvvou" path="res://items/item_resources/chanterelle/chanterelle.png" id="1_4pp5i"]
+[ext_resource type="Texture2D" uid="uid://df7r4441mvvou" path="res://items/item_resources/item_sprites/chanterelle.png" id="1_4pp5i"]
 [ext_resource type="Script" path="res://gui/pause_screen/inventory/inventory_slot_ui.gd" id="1_vq0p3"]
 [ext_resource type="FontFile" uid="uid://ckb2drpo7bwfh" path="res://general/fonts/PixelOperator8.ttf" id="2_mfrlx"]
 

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b2rqjsa3qfly6"]
+
+[ext_resource type="Script" path="res://items/item_pickup/item_data.gd" id="1_o8tsr"]
+[ext_resource type="Texture2D" uid="uid://df7r4441mvvou" path="res://items/item_resources/item_sprites/chanterelle.png" id="2_nqdmt"]
+
+[resource]
+script = ExtResource("1_o8tsr")
+primary_name = "Chanterelle"
+secondary_name = "Cantharellus cibarius"
+description = "The forest's gold!"
+texture = ExtResource("2_nqdmt")

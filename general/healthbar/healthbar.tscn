@@ -643,6 +643,7 @@ y_sort_enabled = true
 texture = ExtResource("1_twup5")
 hframes = 14
 vframes = 2
+frame = 5
 script = ExtResource("2_io1bl")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

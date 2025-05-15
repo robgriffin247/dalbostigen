@@ -43,10 +43,8 @@ level = "res://levels/world_01/level_03.tscn"
 side = 3
 
 [node name="Pickups" type="Node2D" parent="."]
-y_sort_enabled = true
 
 [node name="Chanterelles" type="Node2D" parent="Pickups"]
-y_sort_enabled = true
 
 [node name="ItemSource" parent="Pickups/Chanterelles" instance=ExtResource("7_yh274")]
 position = Vector2(296, 232)
@@ -54,7 +52,6 @@ source_texture = ExtResource("9_dh07h")
 drops = SubResource("Resource_h4idc")
 
 [node name="Blueberries" type="Node2D" parent="Pickups"]
-y_sort_enabled = true
 
 [node name="ItemSource" parent="Pickups/Blueberries" instance=ExtResource("7_yh274")]
 position = Vector2(-32, 240)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bcnfny2nnoknr"
-path="res://.godot/imported/chanterelle_source.png-11c140a3b9dbbe20816500de6237ddcb.ctex"
+uid="uid://bp1rpwi58imhj"
+path="res://.godot/imported/dark_stalked_bolete.png-b59f5c3fbf3845f1f2496b48f83b0872.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/item_resources/chanterelle/chanterelle_source.png"
-dest_files=["res://.godot/imported/chanterelle_source.png-11c140a3b9dbbe20816500de6237ddcb.ctex"]
+source_file="res://items/item_resources/item_sprites/dark_stalked_bolete.png"
+dest_files=["res://.godot/imported/dark_stalked_bolete.png-b59f5c3fbf3845f1f2496b48f83b0872.ctex"]
 
 [params]
 

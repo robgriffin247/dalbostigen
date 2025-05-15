@@ -1,8 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://djgp4go57osj0"]
+[gd_scene load_steps=7 format=3 uid="uid://orup6s788o6s"]
 
-[ext_resource type="Script" path="res://items/item_resources/item_source.gd" id="1_ltojc"]
-[ext_resource type="PackedScene" uid="uid://dafh2dhm7ljm3" path="res://general/boxes/hitbox.tscn" id="2_bgwme"]
-[ext_resource type="PackedScene" uid="uid://dwa4lttnb3b0y" path="res://general/healthbar/healthbar.tscn" id="4_qp4rc"]
+[ext_resource type="Script" path="res://items/item_resources/new_item_source.gd" id="1_ixvbw"]
+[ext_resource type="PackedScene" uid="uid://dafh2dhm7ljm3" path="res://general/boxes/hitbox.tscn" id="2_tjjhp"]
+[ext_resource type="PackedScene" uid="uid://dwa4lttnb3b0y" path="res://general/healthbar/healthbar.tscn" id="3_1588i"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dglny"]
 radius = 4.0
@@ -16,9 +16,10 @@ height = 12.0
 radius = 8.0
 
 [node name="ItemSource" type="CharacterBody2D"]
-script = ExtResource("1_ltojc")
+script = ExtResource("1_ixvbw")
+max_hp = null
 
-[node name="Hitbox" parent="." instance=ExtResource("2_bgwme")]
+[node name="Hitbox" parent="." instance=ExtResource("2_tjjhp")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
 position = Vector2(0, 4)
@@ -35,9 +36,10 @@ position = Vector2(0, 4)
 rotation = 1.5708
 shape = SubResource("CapsuleShape2D_wm0l6")
 
-[node name="Healthbar" parent="." instance=ExtResource("4_qp4rc")]
+[node name="Healthbar" parent="." instance=ExtResource("3_1588i")]
 position = Vector2(0, -8)
-frame = 5
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bo2nx")
+
+[node name="SourceSprite" type="Sprite2D" parent="."]

@@ -1,27 +1,26 @@
-[gd_scene load_steps=13 format=4 uid="uid://isths5illkof"]
+[gd_scene load_steps=11 format=4 uid="uid://isths5illkof"]
 
 [ext_resource type="Script" path="res://levels/level.gd" id="1_oa8kg"]
 [ext_resource type="PackedScene" uid="uid://br2kagcxvsikn" path="res://levels/tilemaps/terrain01.tscn" id="2_k223s"]
 [ext_resource type="PackedScene" uid="uid://06gu4qo543fr" path="res://player/player_spawn/player_spawn.tscn" id="3_m355v"]
 [ext_resource type="PackedScene" uid="uid://baa3sfq1yfqwh" path="res://levels/level_transition/level_transition.tscn" id="4_voaph"]
-[ext_resource type="Texture2D" uid="uid://b17jcv026lofh" path="res://items/item_resources/item_source_sprites/blueberry_bush.png" id="6_sgxmr"]
-[ext_resource type="Resource" uid="uid://b2rqjsa3qfly6" path="res://items/item_resources/resources/chantarelle.tres" id="7_2lraw"]
-[ext_resource type="Resource" uid="uid://diyllbb4vfm2y" path="res://items/item_resources/resources/blueberry.tres" id="7_frbie"]
-[ext_resource type="PackedScene" uid="uid://djgp4go57osj0" path="res://items/item_source.tscn" id="7_yh274"]
-[ext_resource type="Texture2D" uid="uid://bcnfny2nnoknr" path="res://items/item_resources/item_source_sprites/chanterelle_source.png" id="9_dh07h"]
-[ext_resource type="Script" path="res://items/item_pickup/drop_data.gd" id="10_dywf4"]
+[ext_resource type="PackedScene" uid="uid://cmkj546ig81jv" path="res://items/item_resources/blueberry/blueberry_source.tscn" id="6_todkm"]
+[ext_resource type="PackedScene" uid="uid://d2fxd0f6gv1qr" path="res://items/item_resources/chanterelle/chanterelle_source.tscn" id="7_b37g8"]
+[ext_resource type="PackedScene" uid="uid://orup6s788o6s" path="res://items/item_resources/new_item_source.tscn" id="7_fr4dq"]
+[ext_resource type="Resource" uid="uid://b2rqjsa3qfly6" path="res://items/item_resources/chanterelle/chantarelle.tres" id="8_4kuut"]
+[ext_resource type="Script" path="res://items/item_resources/drop_data.gd" id="9_mvl54"]
 
-[sub_resource type="Resource" id="Resource_h4idc"]
-script = ExtResource("10_dywf4")
-item = ExtResource("7_2lraw")
-min_amount = 1
-max_amount = 3
-
-[sub_resource type="Resource" id="Resource_hxnv1"]
-script = ExtResource("10_dywf4")
-item = ExtResource("7_frbie")
-min_amount = 1
-max_amount = 3
+[sub_resource type="Resource" id="Resource_stf2r"]
+script = ExtResource("9_mvl54")
+item = ExtResource("8_4kuut")
+common_min_amount = 1
+common_max_amount = 4
+uncommon_probability = 0.5
+uncommon_min_amount = 6
+uncommon_max_amount = 12
+rare_probability = 0.2
+rare_min_amount = 12
+rare_max_amount = 20
 
 [node name="Level01" type="Node2D"]
 script = ExtResource("1_oa8kg")
@@ -42,36 +41,77 @@ position = Vector2(104, 416)
 level = "res://levels/world_01/level_03.tscn"
 side = 3
 
-[node name="Pickups" type="Node2D" parent="."]
+[node name="Items" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Chanterelles" type="Node2D" parent="Pickups"]
+[node name="Blueberry" type="Node2D" parent="Items"]
 y_sort_enabled = true
 
-[node name="ItemSource" parent="Pickups/Chanterelles" instance=ExtResource("7_yh274")]
-position = Vector2(296, 232)
-source_texture = ExtResource("9_dh07h")
-drops = SubResource("Resource_h4idc")
+[node name="BlueberrySource" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(170, 162)
 
-[node name="Blueberries" type="Node2D" parent="Pickups"]
+[node name="BlueberrySource2" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(210, 161)
+
+[node name="BlueberrySource3" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(187, 118)
+
+[node name="BlueberrySource4" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(218, 123)
+
+[node name="BlueberrySource5" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(284, 205)
+
+[node name="BlueberrySource6" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(142, 261)
+
+[node name="BlueberrySource7" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(-24, 71)
+
+[node name="BlueberrySource8" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(-50, 257)
+
+[node name="BlueberrySource9" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(448, 334)
+
+[node name="BlueberrySource10" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(231, 380)
+
+[node name="BlueberrySource11" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(286, 383)
+
+[node name="BlueberrySource12" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(538, 188)
+
+[node name="BlueberrySource13" parent="Items/Blueberry" instance=ExtResource("6_todkm")]
+position = Vector2(536, 207)
+
+[node name="Chanterelle" type="Node2D" parent="Items"]
 y_sort_enabled = true
 
-[node name="ItemSource" parent="Pickups/Blueberries" instance=ExtResource("7_yh274")]
-position = Vector2(-32, 240)
-source_texture = ExtResource("6_sgxmr")
-drops = SubResource("Resource_hxnv1")
+[node name="ChanterelleSource" parent="Items/Chanterelle" instance=ExtResource("7_b37g8")]
+position = Vector2(26, 158)
 
-[node name="ItemSource2" parent="Pickups/Blueberries" instance=ExtResource("7_yh274")]
-position = Vector2(-8, 256)
-source_texture = ExtResource("6_sgxmr")
-drops = SubResource("Resource_hxnv1")
+[node name="ChanterelleSource2" parent="Items/Chanterelle" instance=ExtResource("7_b37g8")]
+position = Vector2(52, 139)
 
-[node name="ItemSource3" parent="Pickups/Blueberries" instance=ExtResource("7_yh274")]
-position = Vector2(8, 224)
-source_texture = ExtResource("6_sgxmr")
-drops = SubResource("Resource_hxnv1")
+[node name="ChanterelleSource3" parent="Items/Chanterelle" instance=ExtResource("7_b37g8")]
+position = Vector2(312, 152)
 
-[node name="ItemSource4" parent="Pickups/Blueberries" instance=ExtResource("7_yh274")]
-position = Vector2(24, 248)
-source_texture = ExtResource("6_sgxmr")
-drops = SubResource("Resource_hxnv1")
+[node name="ChanterelleSource4" parent="Items/Chanterelle" instance=ExtResource("7_b37g8")]
+position = Vector2(171, 284)
+
+[node name="ChanterelleSource5" parent="Items/Chanterelle" instance=ExtResource("7_b37g8")]
+position = Vector2(-29, 284)
+
+[node name="ChanterelleSource6" parent="Items/Chanterelle" instance=ExtResource("7_b37g8")]
+position = Vector2(-58, -19)
+
+[node name="ChanterelleSource7" parent="Items/Chanterelle" instance=ExtResource("7_b37g8")]
+position = Vector2(469, 349)
+
+[node name="ItemSource" parent="Items/Chanterelle" instance=ExtResource("7_fr4dq")]
+position = Vector2(56, 224)
+source_sprite_file = "res://items/item_resources/chanterelle/chanterelle_source.png"
+max_hp = null
+drops = SubResource("Resource_stf2r")

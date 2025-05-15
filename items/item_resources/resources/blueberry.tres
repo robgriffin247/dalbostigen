@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://diyllbb4vfm2y"]
+
+[ext_resource type="Script" path="res://items/item_pickup/item_data.gd" id="1_u3x7m"]
+[ext_resource type="Texture2D" uid="uid://dkq26mi72k7uf" path="res://items/item_resources/item_sprites/blueberry.png" id="2_bq8md"]
+
+[resource]
+script = ExtResource("1_u3x7m")
+primary_name = "Blueberry"
+secondary_name = "Vaccinium myrtillus"
+description = "Time for blueberry pie"
+texture = ExtResource("2_bq8md")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dst1dxpt7fgkv"
-path="res://.godot/imported/penny_bun.png-13785596aa45bd5067335fcd3e1657c6.ctex"
+path="res://.godot/imported/penny_bun.png-e93a1f008e97cabfccf15b83724d6ee3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/item_resources/penny_bun/penny_bun.png"
-dest_files=["res://.godot/imported/penny_bun.png-13785596aa45bd5067335fcd3e1657c6.ctex"]
+source_file="res://items/item_resources/item_sprites/penny_bun.png"
+dest_files=["res://.godot/imported/penny_bun.png-e93a1f008e97cabfccf15b83724d6ee3.ctex"]
 
 [params]
 

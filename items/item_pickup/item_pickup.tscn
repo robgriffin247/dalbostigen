@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cp6dmtmtlsmcf"]
 
 [ext_resource type="Script" path="res://items/item_pickup/item_pickup.gd" id="1_ub77j"]
-[ext_resource type="Texture2D" uid="uid://dkq26mi72k7uf" path="res://items/item_resources/blueberry/blueberry.png" id="2_j0u6c"]
+[ext_resource type="Texture2D" uid="uid://dkq26mi72k7uf" path="res://items/item_resources/item_sprites/blueberry.png" id="2_j0u6c"]
 [ext_resource type="Texture2D" uid="uid://bf5qellxvjn28" path="res://general/artwork/shadow.png" id="3_p3crq"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vw24p"]
@@ -24,6 +24,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_h0574"]
 resource_name = "bounce"
+length = 0.85
 step = 0.05
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -32,10 +33,10 @@ tracks/0/path = NodePath("Sprite2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.55, 0.7, 0.8, 0.9),
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.4, 0.5, 0.6, 0.7),
 "transitions": PackedFloat32Array(-2, -2, -2, -2, -2, -2, -2),
 "update": 0,
-"values": [Vector2(0, -6), Vector2(0, -24), Vector2(0, -6), Vector2(0, -12), Vector2(0, -6), Vector2(0, -8), Vector2(0, -6)]
+"values": [Vector2(0, -12), Vector2(0, -16), Vector2(0, -6), Vector2(0, -12), Vector2(0, -6), Vector2(0, -10), Vector2(0, -6)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0j7dy"]
@@ -51,6 +52,7 @@ motion_mode = 1
 script = ExtResource("1_ub77j")
 
 [node name="Area2D" type="Area2D" parent="."]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("CircleShape2D_vw24p")
@@ -58,7 +60,7 @@ shape = SubResource("CircleShape2D_vw24p")
 [node name="Shadow" type="Sprite2D" parent="."]
 modulate = Color(0, 0, 0, 0.239216)
 show_behind_parent = true
-position = Vector2(0, -6)
+position = Vector2(0, -4)
 texture = ExtResource("3_p3crq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

@@ -1,7 +1,7 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c8n20vicnm7l"]
 
-[ext_resource type="Script" path="res://items/item_data.gd" id="1_011xq"]
-[ext_resource type="Texture2D" uid="uid://bp1rpwi58imhj" path="res://items/item_resources/dark_stalked_bolete/dark_stalked_bolete.png" id="2_hw215"]
+[ext_resource type="Script" path="res://items/item_pickup/item_data.gd" id="1_011xq"]
+[ext_resource type="Texture2D" uid="uid://bp1rpwi58imhj" path="res://items/item_resources/item_sprites/dark_stalked_bolete.png" id="2_hw215"]
 
 [resource]
 script = ExtResource("1_011xq")

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dkq26mi72k7uf"
-path="res://.godot/imported/blueberry.png-13785fff8ee932734140de69f437a63c.ctex"
+uid="uid://bcnfny2nnoknr"
+path="res://.godot/imported/chanterelle_source.png-4a5705b7f4fd33943067622d2eb15fef.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://items/item_resources/blueberry/blueberry.png"
-dest_files=["res://.godot/imported/blueberry.png-13785fff8ee932734140de69f437a63c.ctex"]
+source_file="res://items/item_resources/item_source_sprites/chanterelle_source.png"
+dest_files=["res://.godot/imported/chanterelle_source.png-4a5705b7f4fd33943067622d2eb15fef.ctex"]
 
 [params]
 
